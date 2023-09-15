@@ -30,7 +30,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#cityName").innerHTML = response.data.name;
   document.querySelector("#cityTemp").innerHTML = `${Math.round(
     response.data.main.temp
-  )} °C`;
+  )}°C`;
 
   document.querySelector(
     "#humidity"
