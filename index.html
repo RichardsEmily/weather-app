@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="weather-app">
-      <div class="searchBar">
+      <div class="search-bar">
         <form class="city-search" id="city-search">
           <input
             type="text"
@@ -30,33 +30,36 @@
             class="form-field"
             id="city-search-field"
           />
-          <input type="submit" class="primary-button" />
+          <input type="submit" class="primary-button" / value="Search">
         </form>
         <button class="secondary-button" id="currentSubmit">Current</button>
       </div>
 
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-end">
           <div class="col left">
             <p>
-              <strong
-                ><span id="currentDay"></span> <span id="currentTime"></span
-              ></strong>
+              Last updated: <strong><span id="date"></span> </strong>
             </p>
-            <h1 id="cityName">Swansea</h1>
+            <h1 id="city"></h1>
             <p>
               Humidity:
-              <strong id="humidity">69%</strong>, Wind:
-              <strong id="wind">8 mph</strong>
+              <strong> <span id="humidity"></span>%</strong>, Wind:
+              <strong><span id="wind"></span>mph</strong>
             </p>
           </div>
 
           <div class="col right">
             <div class="current-temperature">
-              <i class="fa-solid fa-cloud-sun icon main-icon"></i>
-              <h1 id="cityTemp">17°C</h1>
+              <img
+                id="weather-icon"
+                src="https://openweathermap.org/img/wn/04d@2x.png"
+                alt=""
+              />
+              <h1 id="temperature"></h1>
+              <p><a href="#">°C</a> | <a href="#">°F</a></p>
             </div>
-            <p><strong id="description">Partly cloudy</strong></p>
+            <p id="description"></p>
           </div>
         </div>
 

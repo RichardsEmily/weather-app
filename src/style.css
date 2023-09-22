@@ -4,42 +4,39 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-strong {
-  color: #006ba4;
-}
-
 h1 {
   font-size: 48px;
   font-weight: bold;
   line-height: 110%;
   margin: 8px 0;
-  color: #2f2f2f;
+  color: #30434d;
 }
 
 h2 {
   font-size: 20px;
   line-height: 110%;
   margin: 0 0 12px 0;
-  color: #99c9e2;
+  color: #30434d;
 }
 
 p {
   font-size: 16px;
   line-height: 150%;
   margin: 0;
-  color: #8b8b8b;
+  color: #30434d;
+}
+
+a {
+  color: #006ba4;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 form {
   display: flex;
   width: 100%;
   gap: 8px;
-}
-
-a {
-  text-decoration: none;
-  color: #006ba4;
-  font-weight: bold;
+  color: #30434d;
 }
 
 button {
@@ -48,10 +45,14 @@ button {
   border: 0;
   border-radius: 12px;
   background-color: #bfdded;
-  color: #424242;
+  color: #30434d;
 }
 
-.searchBar {
+strong {
+  color: #006ba4;
+}
+
+.search-bar {
   margin-bottom: 40px;
   text-align: center;
   width: 100%;
@@ -60,9 +61,13 @@ button {
   gap: 8px;
 }
 
+::placeholder {
+  color: #495c67;
+}
+
 .secondary-button {
-  background-color: #eaf5fb;
-  color: #424242;
+  background-color: #dceff7;
+  color: #30434d;
 }
 
 .secondary-button:hover {
@@ -73,7 +78,7 @@ button {
   padding: 12px 18px;
   border-radius: 12px;
   border: 0;
-  background-color: #f2f8fb;
+  background-color: #f2f2f2;
   width: 100%;
 }
 
@@ -83,7 +88,7 @@ button {
   border: 0;
   border-radius: 12px;
   background-color: #bfdded;
-  color: #424242;
+  color: #30434d;
 }
 
 .primary-button:hover {
@@ -113,9 +118,23 @@ button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
   padding: 0;
   margin: 0;
+  gap: 4px;
+}
+
+#temperature {
+  margin: 0;
+  line-height: 100%;
+  margin-left: 12px;
+}
+
+#description {
+  margin: 4px 0;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
 }
 
 .icon {
@@ -133,5 +152,5 @@ footer p {
   margin: 40px 0 0 0;
   text-align: center;
   font-size: 14px;
-  color: #99c9e2;
+  color: #30434d;
 }
