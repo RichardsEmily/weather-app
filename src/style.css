@@ -129,6 +129,11 @@ strong {
   margin-left: 12px;
 }
 
+.active {
+  color: #30434d;
+  cursor: default;
+}
+
 #description {
   margin: 4px 0;
 }
