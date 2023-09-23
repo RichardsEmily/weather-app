@@ -16,7 +16,7 @@ p {
   font-size: 16px;
   line-height: 150%;
   margin: 0;
-  color: #30434d;
+  color: #69828f;
 }
 
 a {
@@ -62,7 +62,7 @@ strong {
   padding: 12px 18px;
   border-radius: 12px;
   border: 0;
-  background-color: #f2f2f2;
+  background-color: #f6f5f5;
   width: 100%;
 }
 
@@ -94,14 +94,6 @@ strong {
   margin: 48px 0 12px 0;
 }
 
-.forecast-icon {
-  width: 48px;
-}
-
-.forecast-temperature {
-  color: #a7a7a7;
-}
-
 .right {
   text-align: right;
   margin: 0 auto;
@@ -119,7 +111,16 @@ strong {
 #temperature {
   margin: 0;
   line-height: 100%;
-  margin-left: 12px;
+}
+
+.temperature-celsius {
+  display: flex;
+  gap: 4px;
+}
+
+.temperature-celsius p {
+  color: #30434d;
+  font-weight: bold;
 }
 
 .active {
@@ -133,11 +134,6 @@ strong {
 
 #description::first-letter {
   text-transform: capitalize;
-}
-
-.main-icon {
-  font-size: 48px;
-  margin: 0;
 }
 
 footer p {

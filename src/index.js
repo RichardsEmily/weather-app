@@ -43,7 +43,7 @@ function displayForecast(response) {
           <img src="https://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"/>
-          <p class="forecast-temperature">
+          <p>
             <strong>${Math.round(forecastDay.temp.max)}°</strong> ${Math.round(
           forecastDay.temp.min
         )}°
@@ -84,8 +84,6 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
 
   getForecast(response.data.coord);
 }
@@ -103,32 +101,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
 let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSubmit);
 
 search("Swansea");
 
 let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
