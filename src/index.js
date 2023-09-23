@@ -22,6 +22,32 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+          <p class="forecast-day">${day}</p>
+          <img src="https://openweathermap.org/img/wn/04d@2x.png"/>
+          <p class="forecast-temperature">
+            <strong>17°</strong> 12°
+          </p>
+         </div>
+         `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForcast(coordinates) {
+  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -45,6 +71,8 @@ function displayTemperature(response) {
   );
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -81,6 +109,7 @@ let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSubmit);
 
 search("Swansea");
+displayForecast();
 
 let celsiusTemperature = null;
 

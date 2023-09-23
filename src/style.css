@@ -12,13 +12,6 @@ h1 {
   color: #30434d;
 }
 
-h2 {
-  font-size: 20px;
-  line-height: 110%;
-  margin: 0 0 12px 0;
-  color: #30434d;
-}
-
 p {
   font-size: 16px;
   line-height: 150%;
@@ -65,15 +58,6 @@ strong {
   color: #495c67;
 }
 
-.secondary-button {
-  background-color: #dceff7;
-  color: #30434d;
-}
-
-.secondary-button:hover {
-  background-color: #bfdded;
-}
-
 .form-field {
   padding: 12px 18px;
   border-radius: 12px;
@@ -106,7 +90,16 @@ strong {
 }
 
 .forecast {
-  margin: 40px 0 24px;
+  text-align: center;
+  margin: 48px 0 12px 0;
+}
+
+.forecast-icon {
+  width: 48px;
+}
+
+.forecast-temperature {
+  color: #a7a7a7;
 }
 
 .right {
@@ -135,17 +128,11 @@ strong {
 }
 
 #description {
-  margin: 4px 0;
+  margin: 0 0 4px 0;
 }
 
 #description::first-letter {
   text-transform: capitalize;
-}
-
-.icon {
-  font-size: 48px;
-  color: #99c9e2;
-  margin: 24px 0;
 }
 
 .main-icon {
