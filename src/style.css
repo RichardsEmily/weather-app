@@ -32,15 +32,6 @@ form {
   color: #30434d;
 }
 
-button {
-  font-size: 16px;
-  padding: 12px 24px;
-  border: 0;
-  border-radius: 12px;
-  background-color: #bfdded;
-  color: #30434d;
-}
-
 strong {
   color: #006ba4;
 }
@@ -140,5 +131,4 @@ footer p {
   margin: 40px 0 0 0;
   text-align: center;
   font-size: 14px;
-  color: #30434d;
 }
