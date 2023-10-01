@@ -1,7 +1,13 @@
+:root {
+  --primary-gradient: linear-gradient(98deg, #0069e3 5.49%, #001b62 96.65%);
+  --primary-colour: #001b62;
+  --secondary-colour: #0069e3;
+}
+
 body {
   padding: 80px 40px;
-  background-color: #f2f8fb;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #ebf4ff;
 }
 
 h1 {
@@ -9,18 +15,18 @@ h1 {
   font-weight: bold;
   line-height: 110%;
   margin: 8px 0;
-  color: #30434d;
+  color: white;
 }
 
 p {
   font-size: 16px;
   line-height: 150%;
   margin: 0;
-  color: #69828f;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 a {
-  color: #006ba4;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -29,11 +35,11 @@ form {
   display: flex;
   width: 100%;
   gap: 8px;
-  color: #30434d;
+  color: var(--primary-colour);
 }
 
 strong {
-  color: #006ba4;
+  color: white;
 }
 
 .search-bar {
@@ -46,14 +52,15 @@ strong {
 }
 
 ::placeholder {
-  color: #495c67;
+  color: var(--primary-colour);
+  font-weight: bold;
 }
 
 .form-field {
   padding: 12px 18px;
   border-radius: 12px;
   border: 0;
-  background-color: #f6f5f5;
+  background-color: white;
   width: 100%;
 }
 
@@ -62,22 +69,24 @@ strong {
   padding: 12px 24px;
   border: 0;
   border-radius: 12px;
-  background-color: #bfdded;
-  color: #30434d;
+  background: var(--secondary-colour);
+  color: white;
+  transition: all 0.5ms ease-in-out;
 }
 
 .primary-button:hover {
-  background-color: #afd7ec;
+  background-color: white;
+  color: var(--primary-colour);
 }
 
 .weather-app {
-  background-color: white;
+  background: var(--primary-gradient);
   border-radius: 24px;
   margin: 0 auto;
   padding: 24px;
   max-width: 700px;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 
 .forecast {
@@ -110,17 +119,13 @@ strong {
 }
 
 .temperature-celsius p {
-  color: #30434d;
+  color: white;
   font-weight: bold;
-}
-
-.active {
-  color: #30434d;
-  cursor: default;
 }
 
 #description {
   margin: 0 0 4px 0;
+  color: white;
 }
 
 #description::first-letter {
@@ -131,4 +136,9 @@ footer p {
   margin: 40px 0 0 0;
   text-align: center;
   font-size: 14px;
+  color: var(--primary-colour);
+}
+
+footer a {
+  color: var(--secondary-colour);
 }
