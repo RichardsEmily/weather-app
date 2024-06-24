@@ -1,7 +1,6 @@
 :root {
-  --primary-gradient: linear-gradient(98deg, #0069e3 5.49%, #001b62 96.65%);
   --primary-colour: #001b62;
-  --secondary-colour: #0069e3;
+  --secondary-colour: #90c7ff;
 }
 
 body {
@@ -22,7 +21,7 @@ p {
   font-size: 16px;
   line-height: 150%;
   margin: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--secondary-colour);
 }
 
 a {
@@ -64,14 +63,20 @@ strong {
   width: 100%;
 }
 
+input {
+  color: var(--primary-colour);
+  font-weight: bold;
+}
+
 .primary-button {
   font-size: 16px;
   padding: 12px 24px;
   border: 0;
   border-radius: 12px;
   background: var(--secondary-colour);
-  color: white;
-  transition: all 0.5ms ease-in-out;
+  color: var(--primary-colour);
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
 }
 
 .primary-button:hover {
@@ -80,7 +85,7 @@ strong {
 }
 
 .weather-app {
-  background: var(--primary-gradient);
+  background: var(--primary-colour);
   border-radius: 24px;
   margin: 0 auto;
   padding: 24px;
@@ -140,5 +145,5 @@ footer p {
 }
 
 footer a {
-  color: var(--secondary-colour);
+  color: var(--primary-colour);
 }
