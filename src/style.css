@@ -1,12 +1,13 @@
 :root {
-  --primary-colour: #001b62;
-  --secondary-colour: #90c7ff;
+  --primary-colour: #0f273b;
+  --secondary-colour: #b2d3ed;
 }
 
 body {
   padding: 80px 40px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ebf4ff;
+  background-image: url(/Images/background.jpg);
+  background-size: cover;
 }
 
 h1 {
@@ -73,24 +74,24 @@ input {
   padding: 12px 24px;
   border: 0;
   border-radius: 12px;
-  background: var(--secondary-colour);
-  color: var(--primary-colour);
-  font-weight: bold;
+  background: var(--primary-colour);
+  color: white;
   transition: all 150ms ease-in-out;
 }
 
 .primary-button:hover {
-  background-color: white;
+  background-color: var(--secondary-colour);
   color: var(--primary-colour);
 }
 
 .weather-app {
-  background: var(--primary-colour);
+  background: #0f273bc6;
+  backdrop-filter: blur(5px);
   border-radius: 24px;
+  border: 2px solid #0f273b4d;
   margin: 0 auto;
   padding: 24px;
   max-width: 700px;
-  border-radius: 24px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 
@@ -141,9 +142,9 @@ footer p {
   margin: 40px 0 0 0;
   text-align: center;
   font-size: 14px;
-  color: var(--primary-colour);
+  color: var(--secondary-colour);
 }
 
 footer a {
-  color: var(--primary-colour);
+  color: var(--secondary-colour);
 }
